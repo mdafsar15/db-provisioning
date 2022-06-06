@@ -4,6 +4,7 @@ if [ "$installtype" = "mongo" ]
     sudo unzip -o /tmp/mongo.zip;
     sudo chown -R jenkins:jenkins mongo
     sudo chmod -R 775 mongo
+    cp -r /var/lib/jenkins/workspace/param-pipe/mongo /tmp/
     sudo sh /tmp/getservers.sh;
     rm -f /tmp/getservers.sh;
     rm -f /tmp/startmongoinstance.sh;
